@@ -18,3 +18,15 @@ window.onscroll = () => {
 
   prevScrollPos = currentScrollPos;
 };
+
+const produtoSchema = {
+  id: 'int',
+  tipo: 'P2, P13, P20, P45, P90',
+  quantidade: 'number',
+  placaDoMotorista: 'string',
+  qtdLevando: 'number',
+  qtdChegando: 'number'
+}
+
+
+
