@@ -1,0 +1,198 @@
+:root {
+  --white-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--white-color);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+header {
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: transparent;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.no-transparency {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navigation a {
+  width: auto;
+  padding: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.hero {
+  background-image: url(../icons/hero.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  padding-top: 10vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-info {
+  padding-left: 10rem;
+  width: 100%;
+}
+
+.hero-info h1 {
+  font-size: 6.4rem;
+}
+
+.hero-info p {
+  font-size: 2.4rem;
+}
+
+.hero-nocontent {
+  width: 100%;
+}
+
+.relation {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../icons/pagina1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.relation-content {
+  padding-top: 10vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.relation-info {
+  padding-right: 10rem;
+  width: 100%;
+}
+
+.relation-info h2 {
+  font-size: 6.4rem;
+}
+
+.relation-info p {
+  font-size: 2.4rem;
+}
+
+.relation-nocontent {
+  width: 100%;
+}
+
+.tracking {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../icons/pagina2.png);
+  background-position: center;
+  background-repeat: repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tracking-content {
+  padding-top: 10vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tracking-info {
+  padding-left: 10rem;
+  width: 100%;
+}
+
+.tracking-info h2 {
+  font-size: 6.4rem;
+}
+
+.tracking-info p {
+  font-size: 2.4rem;
+}
+
+.tracking-nocontent {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+
+  .hero-info {
+    padding-left: 5rem;
+  }
+
+  .hero-info h1 {
+    font-size: 3.2rem; /* Ajuste o tamanho da fonte do título para dispositivos móveis */
+  }
+
+  .hero-info p {
+    font-size: 1.6rem; /* Ajuste o tamanho da fonte do texto para dispositivos móveis */
+  }
+
+  /* Repita o mesmo padrão de ajustes para as outras seções (relation e tracking) */
+
+  /* Por exemplo:
+  .relation-info h2 {
+    font-size: 3.2rem;
+  }
+
+  .tracking-info p {
+    font-size: 1.6rem;
+  }
+  */
+}
