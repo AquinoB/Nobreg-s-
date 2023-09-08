@@ -26,7 +26,7 @@
       href="../assets/img/apple-icon.png"
     />
     <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
-    <title>Material Dashboard 2 by Creative Tim</title>
+    <title>Nobregás | Login</title>
     <!--     Fonts and icons     -->
     <link
       rel="stylesheet"
@@ -54,11 +54,6 @@
     />
     <!-- Nepcha Analytics (nepcha.com) -->
     <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
-    <script
-      defer
-      data-site="YOUR_DOMAIN_HERE"
-      src="https://api.nepcha.com/js/nepcha-analytics.js"
-    ></script>
 
     <style>
       .lds-ring {
@@ -167,12 +162,22 @@
                 <div class="card-body">
                   <form role="form" class="text-start">
                     <div class="input-group input-group-outline my-3">
-                      <label class="form-label">Email</label>
-                      <input type="text" class="form-control" />
+                      <!-- <label class="form-label">Email</label> -->
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Email"
+                        id="email"
+                      />
                     </div>
                     <div class="input-group input-group-outline mb-3">
-                      <label class="form-label">Senha</label>
-                      <input type="password" class="form-control" />
+                      <!-- <label class="form-label">Senha</label> -->
+                      <input
+                        type="password"
+                        class="form-control"
+                        placeholder="Senha"
+                        id="password"
+                      />
                     </div>
                     <div
                       class="form-check form-switch d-flex align-items-center mb-3"
@@ -206,23 +211,18 @@
     <!--   Core JS Files   -->
     <script src="../assets/js/core/popper.min.js"></script>
     <script src="../assets/js/core/bootstrap.min.js"></script>
-    <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-    <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
-    <script>
-      var win = navigator.platform.indexOf("Win") > -1;
-      if (win && document.querySelector("#sidenav-scrollbar")) {
-        var options = {
-          damping: "0.5",
-        };
-        Scrollbar.init(document.querySelector("#sidenav-scrollbar"), options);
-      }
+    <!-- <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script> -->
+    <!-- <script src="../assets/js/material-dashboard.min.js?v=3.1.0"></script> -->
 
+    <script>
       const form = document.querySelector("form");
       const buttonForm = form.querySelector("button");
 
       form.addEventListener("submit", function (event) {
         event.preventDefault();
-        console.log("oi");
+        const email = document.querySelector("#email").value;
+        const password = document.querySelector("#password").value;
         buttonForm.innerHTML = `<div class="lds-ring">
                           <div></div>
                           <div></div>
@@ -230,14 +230,26 @@
                           <div></div>
                         </div>`;
 
+        console.log(email, password);
+
+        // form.submit();
+        if (email === "" || password === "") {
+          alert("Preencha todos os campos");
+          buttonForm.innerHTML = "Entrar";
+          return;
+        }
+
         setTimeout(() => {
-          document.querySelector("body > div > div > div > nav > div > a").click();
-        }, 400)
+          if (email === "admin" && password === "12345678") {
+            document
+              .querySelector("body > div > div > div > nav > div > a")
+              .click();
+          } else {
+            alert("Email ou senha incorretos");
+            buttonForm.innerHTML = "Entrar";
+          }
+        }, 500);
       });
     </script>
-    <!-- Github buttons -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="../assets/js/material-dashboard.min.js?v=3.1.0"></script>
   </body>
 </html>
