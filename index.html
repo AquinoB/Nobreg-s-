@@ -29,7 +29,7 @@
       </div>
       <nav class="navigation">
         <a href="/">Home</a>
-        <a href="/produtos.html">Produto</a>
+        <a href="dashboard/material-dashboard-master/pages/sign-in.html">Produto</a>
         <a href="/sobre">Sobre</a>
       </nav>
     </header>
@@ -73,6 +73,7 @@
               destino dos transportes e relatando quaisquer desvios para as
               autoridades locais.
             </p>
+            <button class="show-product">Ver Produto ></button>
           </div>
           <div class="tracking-nocontent"></div>
         </div>
@@ -103,5 +104,13 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const button = document.querySelector("body > main > div.tracking > div > div.tracking-info > button")
+      
+      button.addEventListener("click", () => {
+        window.location.href = "dashboard/material-dashboard-master/pages/sign-in.html"
+      })
+    </script>
   </body>
 </html>

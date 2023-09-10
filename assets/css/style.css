@@ -111,16 +111,23 @@
   width: 100%;
 }
 
- /* @media screen and (max-width: 768px) {
-  .hero-info {
-    padding-left: 5rem;
-  }
+.show-product {
+  background-color: #00000000;
+  border: 1px solid #fff;
+  color: #fff;
+  width: 200px;
+  height: 6rem;
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 4rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: 300ms;
+}
 
-  .hero-info h1 {
-    font-size: 3.2rem;
-  }
-
-  .hero-info p {
-    font-size: 1.6rem; 
-  }
-} */
+.show-product:hover {
+  background-color: #fff;
+  color: #000;
+}
